@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    /* toutes les images ont une taille maxi qui est celle de leur parents */
+    max-width: 100%;
+}
+
+/* mes couleurs en variables */
+:root {
+    --blanc: #fff;
+    --gris-clair: #ddd;
+    --gris-transparant: rgba(0, 0, 0, 0.212);
+    --gris: rgb(155, 155, 155);
+    --gris-fonce: rgb(94, 94, 94);
+    --bleu-clair: #c1d2d9;
+    --bleu-fonce: #7bafc9;
+    --orange: orange; 
+}
+
+/* header */
+header {
+    background-image: url(../img/bg.jpg);
+    /* on couvre tout notre header*/
+    background-size: cover;
+    /* on centre l'image*/
+    background-position: center;
+    /* on ne répète pas l'image */
+    background-repeat: no-repeat;
+    height: 90vh;/* ici vh signfie viewport height -> il représente 90% de la hauteur de l'écarn de l'utilisateur, peu importe la taille de son écran*/
+}
+
+header div#navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--gris-transparant);
+}
+header h1 a {
+    font-family: 'Ephesis', cursive;
+}
+
+header a {
+    color: var(--blanc);
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    transition: 2s ease;/* la transition arrive en douceur*/
+}
+
+header nav a:last-of-type {
+    border: 2px solid var(--blanc);
+}
+
+header nav a:hover {
+    background-color: var(--bleu-fonce);
+}
+
+header #en-tete {
+    text-align: center;
+    color: var(--blanc);
+}
+
+#en-tete h2 {
+    text-transform: capitalize;
+    font-family: 'Ephesis', cursive;
+    font-size: 4em;
+    font-weight: lighter;
+    line-height: 1em;
+    margin: 15px 0 0 0;
+}
+
+#en-tete p {
+    margin: 0;
+}
+
+/* Partie recherche */
+#recherche {
+    height: 10vh;
+    background-color: var(--bleu-clair);
+    color: var(--bleu-fonce);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#recherche p {
+    font-size: 1.3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#recherche i {
+    font-size: 1.2em;
+}
+
+/*  Main */
+.conteneur {
+    /* border: 2px solid red; */
+    width: 70%;
+    margin: 0 auto;
+}
+
+article div {
+    border: 1px solid var(--gris-clair);
+    position: relative;
+}
+.prix {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    background-color: var(--blanc);
+    border: none;
+    padding: 15px 10px;
+}
+
+.texte {
+    padding: 15px;
+    border: none;
+}
+.texte h2 {
+    color: var(--gris-fonce);
+    font-size: 1em;
+}
+.texte p {
+    color: var(--gris);
+    font-size: 0.8em;
+}
+/* le bouton voir plus */
+.more {
+    /* border: 1px solid purple; */
+    text-align: center;
+    height: 70px;
+}
+
+.more button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: var(--bleu-fonce);
+    border: 1px solid var(--bleu-fonce);
+    cursor: pointer;
+    transition: 1s ease;
+}
+.more button:hover {
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+}
+
+footer {
+    /* border: 2px solid brown; */
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+    height: fit-content;
+}
+
+footer a {
+    color: var(--blanc);
+    text-decoration: none;
+}
+footer p {
+    line-height: 35px;
+}
+
+footer i {
+    font-size: 1.2em;
+    padding-right: 25px;
+}
+
+footer a:hover {
+    color: var(--orange);
+}
+
+footer hr {
+    color: var(--blanc);
+    background-color: var(--blanc);
+}
+
+
+.copyright {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RANGEE ET COLONNES */
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.col-1 {
+    width: 8.333333%;
+    padding: 25px
+}
+
+.col-2 {
+    width: 16.666666%;
+    padding: 25px
+}
+
+.col-3 {
+    width: 25%;
+    padding: 25px
+}
+.col-4 {
+    width: 33.333333%;
+    padding: 25px
+}
+.col-5 {
+    width: 41.6666666%;
+    padding: 25px
+}
+.col-6 {
+    width: 50%;
+    padding: 25px
+}
+.col-7 {
+    width: 58.333333%;
+    padding: 25px
+}
+
+.col-8 {
+    width: 66.666666%;
+    padding: 25px
+}
+
+.col-9 {
+    width: 75%;
+    padding: 25px
+}
+.col-10 {
+    width: 83.333333%;
+    padding: 25px
+}
+
+.col-11 {
+    width: 91.666666%;
+    padding: 25px
+}
+.col-12 {
+    width: 100%;
+    padding: 25px
+}
